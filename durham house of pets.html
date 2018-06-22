@@ -1,0 +1,78 @@
+<html>
+
+<head>
+	<title>Durham House of Pets</title>
+	<link href="main.css" ref="stylesheet"/>
+</head>
+
+<body>
+	<nav>
+		<ul>
+		<li><a href="index.html">About Us</a></li>
+		<li><a href="employees.html">Our Team</a></li>
+		<div class="dropdown">
+		<button onclick="myFunction()" class="dropbtn">Products</button>
+ 	 	<div id="mydropdown" class="dropdown-content">
+   		 <a href="dog_supples.html">Dog Supplies</a>
+    	<a href="cat_supplies.html">Cat Supplies</a>
+    	<a href="snake_supplies.html">Snake Supplies</a>
+ 		 </div>
+		</div>
+		<li><a href="contact_us.html">Contact Us</a></li>
+	</nav>
+
+	<div class="w3-content w3-display-container">
+ 	 	<img class="mySlides" src="silly dog.png" style="width:70%">
+ 	 	<img class="mySlides" src="flower cat.png" style="width:70%">
+  		<img class="mySlides" src="couple bird.png" style="width:70%">
+  		<img class="mySlides" src="hamster food.png" style="width:70%">
+
+		</div>
+	
+
+
+	<script>
+
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+    	var i;
+    	var x = document.getElementsByClassName("mySlides");
+    	for (i = 0; i < x.length; i++) {
+       	x[i].style.display = "none";  
+    	}
+    	myIndex++;
+    	if (myIndex > x.length) {myIndex = 1}    
+   		 x[myIndex-1].style.display = "block";  
+    	setTimeout(carousel, 2000); // Change image every 3 seconds
+		}
+		
+	/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+	</script>
+
+
+</body>
+
+
+</html>
+

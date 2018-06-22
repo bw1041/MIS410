@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title> Durham House of Pets </title>
+		<link href= "employee.css" rel="stylesheet" />
+		<script type="text/javascript">function tb8_makeArray(n){this.length = n;return this.length;}tb8_messages = new tb8_makeArray(3);tb8_messages[0] = "Meet the Team!";tb8_messages[1] = "Meet the Team!";tb8_messages[2] = "Meet the Team!";tb8_rptType = 'infinite';tb8_rptNbr = 5;tb8_speed = 100;tb8_delay = 2000;var tb8_counter=1;var tb8_currMsg=0;var tb8_tekst ="";var tb8_i=0;var tb8_TID = null;function tb8_pisi(){tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i+1);document.title = tb8_tekst;tb8_sp=tb8_speed;tb8_i++;if (tb8_i==tb8_messages[tb8_currMsg].length){tb8_currMsg++; tb8_i=0; tb8_tekst="";tb8_sp=tb8_delay;}if (tb8_currMsg == tb8_messages.length){if ((tb8_rptType == 'finite') && (tb8_counter==tb8_rptNbr)){clearTimeout(tb8_TID);return;}tb8_counter++;tb8_currMsg = 0;}tb8_TID = setTimeout("tb8_pisi()", tb8_sp);}tb8_pisi()</script>
+		
+	
+	</head>
+	
+	<body>
+	
+		<h1>Durham House of Pets!</h1>
+	
+		<nav>
+			<ul>
+			<li><a href="web1.html">Home</a></li>
+			<li><a href="index.html">About Us</a></li>
+			<li><a href="employees.html">Our Team</a></li>
+   			<li><a href="products.html">Products</a></li>
+   			<li><a href="policies.html">Policies</a></li>
+			<li><a href="contact_us.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	<h2><i>Meet the Team!</i></h2>
+		<!-- MAIN (Center website) -->
+<div class="main">
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="mikeseas.png" alt="" style="width:100%">
+      <h4>Mike Seas</h4>
+      <br>Store Manager<br/>
+      <br>Joined our team 5 years ago!<br/>
+      <br>(603)657-9894 x1231<br/>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="juliewinters.png" alt="" style="width:100%">
+      <h4>Julie Winters</h4>
+      <br>Business Manager<br/>
+      <br>Joined our team 3.5 years ago!<br/>
+      <br>(603)657-9894 x1232<br/>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="maygarcia.png" alt="" style="width:100%">
+      <h4>May Garcia</h4>
+      <br>Animal Nutrition Specialist<br/>
+      <br>Joined our team 1 year ago!<br/>
+      <br>(603)657-9894 x1233<br/>
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <img src="willkit.png" alt="" style="width:100%">
+      <h4>Will Kit</h4>
+      <br>Advertising Specialist<br/>
+      <br>Joined our team 5 months ago!<br/>
+      <br>(603)657-9894 x1234<br/>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="frankread.png" alt="" style="width:100%">
+      <h4>Frank Read</h4>
+      <br>Customer Service Specialist<br/>
+      <br>Joined our team 8 years ago!<br/>
+      <br>(603)657-9894 x1235<br/>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="samjohnson.png" alt="" style="width:100%">
+      <h4>Sam Johnson</h4>
+      <br>Staff Member<br/>
+      <br>Joined our team 2 months ago!<br/>
+      <br>(603)657-9894 x1236<br/>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="rosieparker.png" alt="" style="width:100%">
+      <h4>Rosie Parker</h4>
+      <p>Staff Member</p>
+      <br>Joined our team 4 years ago!<br/>
+      <br>(603)657-9894 x1237<br/>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="ianchen.png" alt="" style="width:100%">
+      <h4>Ian Chen</h4>
+      <br>Staff Member<br/>
+      <br>Joined our team 6.5 years ago!<br/>
+      <br>(603)657-9894 x1238<br/>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="xingxinglee.png" alt="Car" style="width:100%">
+      <h4>Xing Xing Lee</h4>
+      <br>Staff Member<br/>
+      <br>Joined our team 2 years ago!<br/>
+      <br>(603)657-9894 x1239<br/>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+  
+
+
+  </body>
+	
+	
+</html>
